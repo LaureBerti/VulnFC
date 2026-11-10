@@ -1,0 +1,243 @@
+==============================================================================
+vulncheck -- is this benchmark's vulnerability rate interpretable?
+==============================================================================
+  rate rows read : 427
+  cells          : 128  (condition x victim)
+  grouped on     : attack_type, baseline, budget, epsilon, label_semantics, max_samples, metric, rag_enabled, shot_mode + factors recovered from filenames
+  gate inputs    : none supplied
+  thresholds     : lift > 0.05, skew < 90% (conventions; margins reported)
+
+[FAIL] climatefever:bi_lstm [llm_generated]   seeds=3 rate=0.0000
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         FAIL S  rate is exactly 0.000 in 3/3 seed(s) over n=12, with no gate to tell resistance from a victim that cannot be flipped
+
+[FAIL] climatefever:bi_lstm [llm_generated/0.1/400]   seeds=2 rate=0.0000
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         FAIL S  rate is exactly 0.000 in 2/2 seed(s) over n=12, with no gate to tell resistance from a victim that cannot be flipped
+
+[FAIL] climatefever:bi_lstm [pos_negation]   seeds=3 rate=0.0000
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         FAIL S  rate is exactly 0.000 in 3/3 seed(s) over n=12, with no gate to tell resistance from a victim that cannot be flipped
+
+[FAIL] climatefever:bi_lstm [pos_negation/0.1/400]   seeds=2 rate=0.0000
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         FAIL S  rate is exactly 0.000 in 2/2 seed(s) over n=12, with no gate to tell resistance from a victim that cannot be flipped
+
+[FAIL] climatefever:lstm_title [llm_generated]   seeds=3 rate=0.0000
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         FAIL S  rate is exactly 0.000 in 3/3 seed(s) over n=12, with no gate to tell resistance from a victim that cannot be flipped
+
+[FAIL] climatefever:lstm_title [llm_generated/0.1/400]   seeds=3 rate=0.0000
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         FAIL S  rate is exactly 0.000 in 3/3 seed(s) over n=12, with no gate to tell resistance from a victim that cannot be flipped
+
+[FAIL] climatefever:lstm_title [pos_negation]   seeds=3 rate=0.0000
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         FAIL S  rate is exactly 0.000 in 3/3 seed(s) over n=12, with no gate to tell resistance from a victim that cannot be flipped
+
+[FAIL] climatefever:lstm_title [pos_negation/0.1/400]   seeds=3 rate=0.0000
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         FAIL S  rate is exactly 0.000 in 3/3 seed(s) over n=12, with no gate to tell resistance from a victim that cannot be flipped
+
+[FAIL] covid19:bert [llm_generated]   seeds=9 rate=0.1980
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         FAIL H  rows come from 9 differently-named sources after removing seed and recovered factors: a condition may be recorded only in filenames, so this cell may pool distinct experiments
+         WARN V  spread 0.2481 exceeds the mean 0.1980 over 9 seeds [0.0769, 0.3250]
+
+[WARN] covid19:bert [sybil/2e-05]   seeds=3 rate=0.0583
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         WARN V  spread 0.0750 exceeds the mean 0.0583 over 3 seeds [0.0250, 0.1000]
+
+[FAIL] covid19:bi_lstm [pos_negation]   seeds=3 rate=0.0346
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         FAIL S  rate is exactly 0.000 in 1/3 seed(s) over n=37, with no gate to tell resistance from a victim that cannot be flipped
+         WARN V  spread 0.0526 exceeds the mean 0.0346 over 3 seeds [0.0000, 0.0526]
+
+[FAIL] covid19:bi_lstm [pos_negation/0.1/400]   seeds=3 rate=0.0346
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         FAIL S  rate is exactly 0.000 in 1/3 seed(s) over n=37, with no gate to tell resistance from a victim that cannot be flipped
+         WARN V  spread 0.0526 exceeds the mean 0.0346 over 3 seeds [0.0000, 0.0526]
+
+[FAIL] covid19:llama3.2:latest [llm_generated/false/zero_shot]   seeds=6 rate=0.4179
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         FAIL H  rows come from 2 differently-named sources after removing seed and recovered factors: a condition may be recorded only in filenames, so this cell may pool distinct experiments
+
+[FAIL] covid19:llama3.2:latest [prompt_injection/false/zero_shot]   seeds=6 rate=0.3408
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         FAIL H  rows come from 2 differently-named sources after removing seed and recovered factors: a condition may be recorded only in filenames, so this cell may pool distinct experiments
+
+[FAIL] covid19:llama3.2:latest [semantic_paraphrase/false/zero_shot]   seeds=6 rate=0.4485
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         FAIL H  rows come from 2 differently-named sources after removing seed and recovered factors: a condition may be recorded only in filenames, so this cell may pool distinct experiments
+
+[FAIL] covid19:llama3.2:latest [semantic_paraphrase/0.0/preserving/vs/false/zero_shot]   seeds=6 rate=0.1809
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         FAIL H  rows come from 2 differently-named sources after removing seed and recovered factors: a condition may be recorded only in filenames, so this cell may pool distinct experiments
+
+[WARN] covid19:qwen2.5:14b [semantic_paraphrase/0.0/preserving/vs/false/zero_shot]   seeds=3 rate=0.1330
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         WARN V  spread 0.1682 exceeds the mean 0.1330 over 3 seeds [0.0513, 0.2195]
+
+[WARN] covid19:rnn [pos_negation]   seeds=3 rate=0.0426
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         WARN V  spread 0.0500 exceeds the mean 0.0426 over 3 seeds [0.0250, 0.0750]
+
+[WARN] covid19:rnn [pos_negation/0.1/400]   seeds=3 rate=0.0426
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         WARN V  spread 0.0500 exceeds the mean 0.0426 over 3 seeds [0.0250, 0.0750]
+
+[FAIL] covid19:roberta [llm_generated]   seeds=9 rate=0.1747
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         FAIL H  rows come from 9 differently-named sources after removing seed and recovered factors: a condition may be recorded only in filenames, so this cell may pool distinct experiments
+
+[FAIL] covid19:roberta [sybil/2e-05]   seeds=3 rate=0.0085
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         FAIL S  rate is exactly 0.000 in 2/3 seed(s) over n=38, with no gate to tell resistance from a victim that cannot be flipped
+         WARN V  spread 0.0256 exceeds the mean 0.0085 over 3 seeds [0.0000, 0.0256]
+
+[FAIL] kaggle:bi_lstm [llm_generated]   seeds=3 rate=0.0000
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         FAIL S  rate is exactly 0.000 in 3/3 seed(s) over n=19, with no gate to tell resistance from a victim that cannot be flipped
+
+[FAIL] kaggle:bi_lstm [llm_generated/0.1/400]   seeds=3 rate=0.0000
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         FAIL S  rate is exactly 0.000 in 3/3 seed(s) over n=19, with no gate to tell resistance from a victim that cannot be flipped
+
+[FAIL] kaggle:bi_lstm [pos_negation]   seeds=3 rate=0.0000
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         FAIL S  rate is exactly 0.000 in 3/3 seed(s) over n=19, with no gate to tell resistance from a victim that cannot be flipped
+
+[FAIL] kaggle:bi_lstm [pos_negation/0.1/400]   seeds=3 rate=0.0000
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         FAIL S  rate is exactly 0.000 in 3/3 seed(s) over n=19, with no gate to tell resistance from a victim that cannot be flipped
+
+[FAIL] kaggle:llama3.2:latest [llm_generated/false/zero_shot]   seeds=6 rate=0.3225
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         FAIL H  rows come from 2 differently-named sources after removing seed and recovered factors: a condition may be recorded only in filenames, so this cell may pool distinct experiments
+         WARN V  spread 0.4250 exceeds the mean 0.3225 over 6 seeds [0.2000, 0.6250]
+
+[FAIL] kaggle:llama3.2:latest [prompt_injection/false/zero_shot]   seeds=6 rate=0.5132
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         FAIL H  rows come from 2 differently-named sources after removing seed and recovered factors: a condition may be recorded only in filenames, so this cell may pool distinct experiments
+
+[FAIL] kaggle:llama3.2:latest [semantic_paraphrase/false/zero_shot]   seeds=6 rate=0.2325
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         FAIL H  rows come from 2 differently-named sources after removing seed and recovered factors: a condition may be recorded only in filenames, so this cell may pool distinct experiments
+
+[FAIL] kaggle:llama3.2:latest [semantic_paraphrase/0.0/preserving/vs/false/zero_shot]   seeds=6 rate=0.1452
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         FAIL H  rows come from 2 differently-named sources after removing seed and recovered factors: a condition may be recorded only in filenames, so this cell may pool distinct experiments
+         WARN V  spread 0.1833 exceeds the mean 0.1452 over 6 seeds [0.0667, 0.2500]
+
+[FAIL] kaggle:lstm_title [pos_negation]   seeds=3 rate=0.0448
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         FAIL S  rate is exactly 0.000 in 1/3 seed(s) over n=21, with no gate to tell resistance from a victim that cannot be flipped
+         WARN V  spread 0.0909 exceeds the mean 0.0448 over 3 seeds [0.0000, 0.0909]
+
+[FAIL] kaggle:lstm_title [pos_negation/0.1/400]   seeds=3 rate=0.0448
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         FAIL S  rate is exactly 0.000 in 1/3 seed(s) over n=21, with no gate to tell resistance from a victim that cannot be flipped
+         WARN V  spread 0.0909 exceeds the mean 0.0448 over 3 seeds [0.0000, 0.0909]
+
+[FAIL] kaggle:phi3.5:latest [prompt_injection/false/zero_shot]   seeds=5 rate=0.9606
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         FAIL S  rate at the ceiling in 1/5 seed(s): nothing further can register, so a narrow interval here measures determinism, not an effect
+         FAIL H  rows come from 2 differently-named sources after removing seed and recovered factors: a condition may be recorded only in filenames, so this cell may pool distinct experiments
+
+[FAIL] politifact:bi_lstm [llm_generated]   seeds=3 rate=0.0000
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         FAIL S  rate is exactly 0.000 in 3/3 seed(s) over n=11, with no gate to tell resistance from a victim that cannot be flipped
+
+[FAIL] politifact:bi_lstm [llm_generated/0.1/400]   seeds=3 rate=0.0000
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         FAIL S  rate is exactly 0.000 in 3/3 seed(s) over n=11, with no gate to tell resistance from a victim that cannot be flipped
+
+[FAIL] politifact:bi_lstm [pos_negation]   seeds=3 rate=0.0000
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         FAIL S  rate is exactly 0.000 in 3/3 seed(s) over n=11, with no gate to tell resistance from a victim that cannot be flipped
+
+[FAIL] politifact:bi_lstm [pos_negation/0.1/400]   seeds=3 rate=0.0000
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         FAIL S  rate is exactly 0.000 in 3/3 seed(s) over n=11, with no gate to tell resistance from a victim that cannot be flipped
+
+[WARN] politifact:llama3.2:latest [semantic_paraphrase/0.0/preserving/vs/false/zero_shot]   seeds=3 rate=0.4111
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         WARN V  spread 0.5000 exceeds the mean 0.4111 over 3 seeds [0.2000, 0.7000]
+
+[WARN] politifact:lstm_title [llm_generated]   seeds=3 rate=0.1708
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         WARN V  spread 0.2363 exceeds the mean 0.1708 over 3 seeds [0.0714, 0.3077]
+
+[FAIL] politifact:lstm_title [pos_negation]   seeds=3 rate=0.0735
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         FAIL S  rate is exactly 0.000 in 1/3 seed(s) over n=13, with no gate to tell resistance from a victim that cannot be flipped
+         WARN V  spread 0.1538 exceeds the mean 0.0735 over 3 seeds [0.0000, 0.1538]
+
+[FAIL] politifact:lstm_title [pos_negation/0.1/400]   seeds=3 rate=0.0735
+         n/a  G  no trivial baseline released -- a degenerate victim would be indistinguishable here
+         FAIL S  rate is exactly 0.000 in 1/3 seed(s) over n=13, with no gate to tell resistance from a victim that cannot be flipped
+         WARN V  spread 0.1538 exceeds the mean 0.0735 over 3 seeds [0.0000, 0.1538]
+
+------------------------------------------------------------------------------
+GAP STABILITY -- released differences across the seeds behind them
+------------------------------------------------------------------------------
+  FAIL P  covid19:fgsm/lr2e-05: the released gap ranges 0.0756 across 3 seeds [+0.0039, +0.0795, +0.0276] about a mean of +0.0370 -- a single seed moves it by more than its own size
+  FAIL P  pubhealth:fgsm/lr2e-05: the released gap ranges 0.4650 across 3 seeds [+0.0492, +0.0918, +0.5142] about a mean of +0.2184 -- a single seed moves it by more than its own size
+  FAIL P  pubhealth:sybil/lr2e-05: the released gap changes SIGN across 3 seeds [-0.0556, -0.0857, +0.0286] -- the direction of the effect is not determined by the design
+
+------------------------------------------------------------------------------
+RESOLUTION -- differences no wider than one claim
+------------------------------------------------------------------------------
+  FAIL R  climatefever:lstm_title [llm_generated] vs bi_lstm: |delta|=0.0000 <= max(1/12,1/12)=0.0833 -- 0.0 claim(s) wide; not separable from a single item
+  FAIL R  climatefever:lstm_title [llm_generated/0.1/400] vs bi_lstm: |delta|=0.0000 <= max(1/12,1/12)=0.0833 -- 0.0 claim(s) wide; not separable from a single item
+  FAIL R  climatefever:lstm_title [pos_negation] vs bi_lstm: |delta|=0.0000 <= max(1/12,1/12)=0.0833 -- 0.0 claim(s) wide; not separable from a single item
+  FAIL R  climatefever:lstm_title [pos_negation] vs rnn: |delta|=0.0982 <= max(1/12,1/10)=0.1000 -- 1.0 claim(s) wide; not separable from a single item
+  FAIL R  climatefever:bi_lstm [pos_negation] vs rnn: |delta|=0.0982 <= max(1/12,1/10)=0.1000 -- 1.0 claim(s) wide; not separable from a single item
+  FAIL R  climatefever:lstm_title [pos_negation/0.1/400] vs bi_lstm: |delta|=0.0000 <= max(1/12,1/12)=0.0833 -- 0.0 claim(s) wide; not separable from a single item
+  FAIL R  covid19:bert-base-uncased [fgsm/0.3/5e-05] vs roberta-base: |delta|=0.0256 <= max(1/39,1/39)=0.0256 -- 1.0 claim(s) wide; not separable from a single item
+  FAIL R  covid19:lstm_title [llm_generated] vs rnn: |delta|=0.0197 <= max(1/33,1/36)=0.0303 -- 0.7 claim(s) wide; not separable from a single item
+  FAIL R  covid19:lstm_title [llm_generated] vs bert: |delta|=0.0143 <= max(1/33,1/39)=0.0303 -- 0.5 claim(s) wide; not separable from a single item
+  FAIL R  covid19:rnn [llm_generated] vs bert: |delta|=0.0054 <= max(1/36,1/39)=0.0278 -- 0.2 claim(s) wide; not separable from a single item
+  FAIL R  covid19:rnn [llm_generated] vs roberta: |delta|=0.0179 <= max(1/36,1/38)=0.0278 -- 0.6 claim(s) wide; not separable from a single item
+  FAIL R  covid19:bert [llm_generated] vs roberta: |delta|=0.0233 <= max(1/39,1/38)=0.0263 -- 0.9 claim(s) wide; not separable from a single item
+  FAIL R  covid19:llama3.2:latest [llm_generated/false/zero_shot] vs phi3.5:latest: |delta|=0.0260 <= max(1/9,1/44)=0.1111 -- 0.2 claim(s) wide; not separable from a single item
+  FAIL R  covid19:llama3.2:latest [llm_generated/false/zero_shot] vs qwen2.5:14b: |delta|=0.0830 <= max(1/9,1/39)=0.1111 -- 0.7 claim(s) wide; not separable from a single item
+  FAIL R  covid19:lstm_title [llm_generated/0.1/400] vs bi_lstm: |delta|=0.0034 <= max(1/33,1/37)=0.0303 -- 0.1 claim(s) wide; not separable from a single item
+  FAIL R  covid19:lstm_title [pos_negation] vs bi_lstm: |delta|=0.0007 <= max(1/33,1/37)=0.0303 -- 0.0 claim(s) wide; not separable from a single item
+  FAIL R  covid19:lstm_title [pos_negation] vs rnn: |delta|=0.0073 <= max(1/33,1/36)=0.0303 -- 0.2 claim(s) wide; not separable from a single item
+  FAIL R  covid19:bi_lstm [pos_negation] vs rnn: |delta|=0.0080 <= max(1/37,1/36)=0.0278 -- 0.3 claim(s) wide; not separable from a single item
+  FAIL R  covid19:lstm_title [pos_negation/0.1/400] vs bi_lstm: |delta|=0.0007 <= max(1/33,1/37)=0.0303 -- 0.0 claim(s) wide; not separable from a single item
+  FAIL R  covid19:lstm_title [pos_negation/0.1/400] vs rnn: |delta|=0.0073 <= max(1/33,1/36)=0.0303 -- 0.2 claim(s) wide; not separable from a single item
+  FAIL R  covid19:bi_lstm [pos_negation/0.1/400] vs rnn: |delta|=0.0080 <= max(1/37,1/36)=0.0278 -- 0.3 claim(s) wide; not separable from a single item
+  FAIL R  covid19:llama3.2:latest [prompt_injection/false/zero_shot] vs qwen2.5:14b: |delta|=0.1007 <= max(1/8,1/39)=0.1250 -- 0.8 claim(s) wide; not separable from a single item
+  FAIL R  covid19:llama3.2:latest [semantic_paraphrase/false/zero_shot] vs phi3.5:latest: |delta|=0.1030 <= max(1/9,1/45)=0.1111 -- 0.9 claim(s) wide; not separable from a single item
+  FAIL R  covid19:llama3.2:latest [semantic_paraphrase/false/zero_shot] vs qwen2.5:14b: |delta|=0.0400 <= max(1/9,1/39)=0.1111 -- 0.4 claim(s) wide; not separable from a single item
+  FAIL R  covid19:llama3.2:latest [semantic_paraphrase/0.0/preserving/vs/false/zero_shot] vs phi3.5:latest: |delta|=0.1000 <= max(1/9,1/44)=0.1111 -- 0.9 claim(s) wide; not separable from a single item
+  FAIL R  covid19:llama3.2:latest [semantic_paraphrase/0.0/preserving/vs/false/zero_shot] vs qwen2.5:14b: |delta|=0.0479 <= max(1/9,1/39)=0.1111 -- 0.4 claim(s) wide; not separable from a single item
+  FAIL R  kaggle:lstm_title [llm_generated/0.1/400] vs rnn: |delta|=0.0279 <= max(1/21,1/21)=0.0476 -- 0.6 claim(s) wide; not separable from a single item
+  FAIL R  kaggle:lstm_title [pos_negation] vs bi_lstm: |delta|=0.0448 <= max(1/21,1/19)=0.0526 -- 0.9 claim(s) wide; not separable from a single item
+  FAIL R  kaggle:lstm_title [pos_negation] vs rnn: |delta|=0.0280 <= max(1/21,1/21)=0.0476 -- 0.6 claim(s) wide; not separable from a single item
+  FAIL R  kaggle:lstm_title [pos_negation/0.1/400] vs bi_lstm: |delta|=0.0448 <= max(1/21,1/19)=0.0526 -- 0.9 claim(s) wide; not separable from a single item
+  FAIL R  kaggle:lstm_title [pos_negation/0.1/400] vs rnn: |delta|=0.0280 <= max(1/21,1/21)=0.0476 -- 0.6 claim(s) wide; not separable from a single item
+  FAIL R  politifact:lstm_title [pos_negation] vs bi_lstm: |delta|=0.0735 <= max(1/13,1/11)=0.0909 -- 0.8 claim(s) wide; not separable from a single item
+  FAIL R  politifact:lstm_title [pos_negation/0.1/400] vs bi_lstm: |delta|=0.0735 <= max(1/13,1/11)=0.0909 -- 0.8 claim(s) wide; not separable from a single item
+  FAIL R  pubhealth:lstm_title [llm_generated] vs bi_lstm: |delta|=0.0285 <= max(1/28,1/24)=0.0417 -- 0.7 claim(s) wide; not separable from a single item
+  FAIL R  pubhealth:lstm_title [llm_generated] vs rnn: |delta|=0.0020 <= max(1/28,1/30)=0.0357 -- 0.1 claim(s) wide; not separable from a single item
+  FAIL R  pubhealth:bi_lstm [llm_generated] vs rnn: |delta|=0.0305 <= max(1/24,1/30)=0.0417 -- 0.7 claim(s) wide; not separable from a single item
+  FAIL R  pubhealth:bi_lstm [llm_generated] vs bert: |delta|=0.0368 <= max(1/24,1/29)=0.0417 -- 0.9 claim(s) wide; not separable from a single item
+  FAIL R  pubhealth:llama3.2:latest [llm_generated/false/zero_shot] vs phi3.5:latest: |delta|=0.0531 <= max(1/8,1/28)=0.1250 -- 0.4 claim(s) wide; not separable from a single item
+  FAIL R  pubhealth:lstm_title [llm_generated/0.1/400] vs bi_lstm: |delta|=0.0301 <= max(1/28,1/24)=0.0417 -- 0.7 claim(s) wide; not separable from a single item
+  FAIL R  pubhealth:lstm_title [llm_generated/0.1/400] vs rnn: |delta|=0.0179 <= max(1/28,1/30)=0.0357 -- 0.5 claim(s) wide; not separable from a single item
+  ... 10 more
+
+  unstable released differences                  3
+==============================================================================
+  cells OK            75
+  cells with WARNING  9
+  cells FAILING       44
+  checks not checkable from the released files   136
+  cross-victim differences inside one claim      50
+==============================================================================
+A failing cell does not mean the attack is weak. It means the number cannot be
+read as evidence of robustness, because the check that would separate the two
+was not satisfiable. Fix the measurement before interpreting the rate.

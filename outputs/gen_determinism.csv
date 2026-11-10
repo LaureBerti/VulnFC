@@ -1,0 +1,3 @@
+arm,workers,n_claims,n_identical,verdict
+parallel,4,12,0,NONDETERMINISTIC
+serial,1,12,3,NONDETERMINISTIC

@@ -1,0 +1,2 @@
+dataset,model,attack_type,time_condition_s,time_search_s,time_eval_s,n_candidates
+covid19,roberta,llm_generated,192.51,182.48,9.18,40

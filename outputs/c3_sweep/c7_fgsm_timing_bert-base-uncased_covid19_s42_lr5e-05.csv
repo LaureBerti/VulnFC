@@ -1,0 +1,2 @@
+dataset,model,attack_type,epsilon,seed,time_condition_s,time_search_s,time_eval_s,n_candidates
+covid19,bert-base-uncased,fgsm,0.3,42,11697.32,11327.13,342.76,2000

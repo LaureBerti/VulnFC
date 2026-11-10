@@ -1,0 +1,2 @@
+dataset,model,attack_type,epsilon,seed,vs,ir,csr,csr_ir,n_target_correct,n_targets,n_perturbed,time_search_s,time_eval_s,n_candidates,time_condition_s
+pubhealth,roberta-base,fgsm,0.3,42,0.5143,0.45,0.0,0.0,35,40,40,913.57,60.17,2000,982.75

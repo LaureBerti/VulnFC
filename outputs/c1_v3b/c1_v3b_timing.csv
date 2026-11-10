@@ -1,0 +1,4 @@
+dataset,llm_victim,attack_type,shot_mode,time_condition_s,time_search_s,time_eval_s,n_candidates
+pubhealth,phi3.5:latest,prompt_injection,zero_shot,492.66,0.0,489.9,60
+kaggle,phi3.5:latest,prompt_injection,zero_shot,8120.88,0.0,8112.27,60
+kaggle,phi3.5:latest,prompt_injection,zero_shot,9089.28,0.0,9076.35,60

@@ -1,0 +1,2 @@
+dataset,model,attack_type,seed,vs,ir,csr,csr_ir,n_target_correct,accuracy_clean,accuracy_poisoned,n_sources,n_malicious,time_search_s,time_eval_s,n_candidates,time_condition_s
+pubhealth,roberta,sybil,42,0.0541,0.05,0.0,0.0,37,0.83,0.825,400,40,0.0,3067.97,40,3071.66

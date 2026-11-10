@@ -1,0 +1,2 @@
+dataset,model,attack_type,seed,metric,metric_value,label_semantics,baseline,vs,dfr,ir,csr,csr_ir,n_target_correct,accuracy_clean,accuracy_poisoned,n_sources,n_malicious,time_search_s,time_eval_s,n_candidates,time_condition_s
+pubhealth,bert,llm_generated,456,dfr,0.6061,changing,0.5455,,0.6061,0.35,0.0,0.0,33,0.825,0.79,400,40,24.23,6.67,40,31.72

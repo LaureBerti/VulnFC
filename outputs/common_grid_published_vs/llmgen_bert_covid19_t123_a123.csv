@@ -1,0 +1,2 @@
+dataset,model,attack_type,seed,vs,ir,csr,csr_ir,n_target_correct,accuracy_clean,accuracy_poisoned,n_sources,n_malicious,time_search_s,time_eval_s,n_candidates,time_condition_s
+covid19,bert,llm_generated,123,0.2051,0.2,0.0,0.0,39,0.98,0.96,400,40,458.93,190.86,40,652.65

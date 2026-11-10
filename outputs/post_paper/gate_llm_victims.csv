@@ -1,0 +1,5 @@
+dataset,victim,shot_mode,split_seed,workers,n_scored,n_unavailable,accuracy,majority_baseline,lift,skew,fold_lift_min,fold_lift_max,fold_lift_sd,k_folds,gate
+kaggle,llama3.2:latest,zero_shot,42,4,8005,114,0.5274,0.5469,-0.0195,0.8695,-0.0543,0.0056,0.0225,5,FAIL
+covid19,llama3.2:latest,zero_shot,42,4,2076,65,0.5323,0.5308,0.0014,0.8136,-0.0386,0.0288,0.0291,5,FAIL
+politifact,llama3.2:latest,zero_shot,42,4,256,3,0.5312,0.5664,-0.0352,0.7695,-0.1154,0.0588,0.0719,5,INDETERMINATE
+pubhealth,llama3.2:latest,zero_shot,42,4,2004,14,0.6018,0.6297,-0.0279,0.5928,-0.0549,-0.0175,0.0159,5,FAIL

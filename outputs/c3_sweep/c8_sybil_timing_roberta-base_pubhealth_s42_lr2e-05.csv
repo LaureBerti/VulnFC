@@ -1,0 +1,2 @@
+dataset,model,attack_type,time_condition_s,time_search_s,time_eval_s,n_candidates
+pubhealth,roberta,sybil,2047.95,0.0,2044.11,40

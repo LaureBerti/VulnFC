@@ -1,0 +1,2 @@
+dataset,model,attack_type,epsilon,seed,vs,ir,csr,csr_ir,n_target_correct,n_targets,n_perturbed,time_search_s,time_eval_s,n_candidates,time_condition_s
+covid19,roberta-base,fgsm,0.3,42,0.8205,0.8,0.0,0.0,39,40,40,9011.03,323.74,2000,9352.85

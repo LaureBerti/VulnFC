@@ -1,0 +1,47 @@
+cff-version: 1.2.0
+message: "If you use VulnFC or build on this work, please cite the paper below."
+type: software
+title: "VulnFC — Truth under Input Poisoning Attacks: Benchmarking Fact-Checking Architectures"
+abstract: >
+  VulnFC is an input-poisoning vulnerability benchmark for fact-checking pipelines: victims are
+  trained once on an unmodified corpus and the attack rewrites claims at evaluation time. It
+  evaluates three victim families — recurrent networks (LSTM, Bi-LSTM, RNN), transformer SLMs under
+  black-box and white-box access (BERT, RoBERTa), and locally served LLMs (Llama-3.2, Phi-3.5,
+  Qwen-2.5) — against attack
+  families spanning zero-cost prompt injection, semantic paraphrase, LLM-generated claims, Sybil
+  flooding, and white-box FGSM/PGD, together with a variational truth-discovery defence (SSTF-VI).
+  The release contains the evaluation code, the runner scripts, the result CSVs underlying every
+  reported table. Attacks are scored against the label their rewrite leaves behind: a
+  label-preserving rewrite against the original claim's label, a label-changing one against the
+  rewritten claim's own.
+
+# ICDE 2027 reviews single-blind, so authorship is disclosed at submission.
+authors:
+  - family-names: "Berti-Equille"
+    given-names: "Laure"
+    affiliation: "IRD, ESPACE-DEV, Montpellier, France"
+    email: "laure.berti@ird.fr"
+    orcid: "https://orcid.org/0000-0002-8046-0570"
+
+repository-code: "https://github.com/LaureBerti/VulnFC"
+license: MIT
+date-released: 2026-05-23
+keywords:
+  - data poisoning
+  - fact-checking
+  - truth discovery
+  - adversarial robustness
+  - large language models
+  - vulnerability benchmark
+  - reproducibility
+  - variational inference
+
+preferred-citation:
+  type: conference-paper
+  title: "Truth under Input Poisoning Attacks: Benchmarking Fact-Checking Architectures"
+  authors:
+    - family-names: "Berti-Equille"
+      given-names: "Laure"
+  collection-title: "Proceedings of the 43rd IEEE International Conference on Data Engineering (ICDE 2027), Experiment, Analysis and Benchmark Track"
+  year: 2027
+  notes: "Under review. The bracketed [Experiment, Analysis, and Benchmark] title tag required at submission is removed in the camera-ready of accepted papers."

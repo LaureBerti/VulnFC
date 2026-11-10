@@ -1,0 +1,2 @@
+dataset,model,attack_type,seed,vs,ir,csr,csr_ir,n_target_correct,accuracy_clean,accuracy_poisoned,n_sources,n_malicious,time_search_s,time_eval_s,n_candidates,time_condition_s
+pubhealth,roberta,llm_generated,123,0.3448,0.25,0.0,0.0,29,0.855,0.83,400,40,521.29,135.8,40,661.06

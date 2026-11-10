@@ -1,0 +1,33 @@
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+venv/
+*.egg-info/
+checkpoints*/
+.env
+.env.*
+quarantined/
+superseded/
+
+# Paper artifacts are not part of the code artifact. Generated tables and figures, and the scripts
+# that emit them, live with the manuscript; the deposit ships the experiments and the result CSVs
+# those tables are computed from.
+*.tex
+tables/
+figures/
+experiments/make_tables.py
+experiments/fig_*.py
+experiments/plot_*.py
+# Cloud provisioning is not part of the artifact: it encodes zones, machine types and project
+# scopes that are specific to one account and reproduce nothing about the experiments.
+scripts/vm_*.sh
+
+# A Hydra run writes outputs/<date>/<time>/.hydra/hydra.yaml, which records the absolute working
+# directory, so running a tool from a clone would otherwise create a committable file carrying the
+# runner's own paths.
+outputs/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]/
+.hydra/
+*.yaml
+conf/
+!environment.yml

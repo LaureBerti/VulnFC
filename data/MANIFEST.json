@@ -1,0 +1,31 @@
+{
+  "pubhealth": {
+    "dataset": "pubhealth",
+    "source": "Jezzarax/pubhealth-converted",
+    "source_type": "huggingface",
+    "retrieved": "2026-08-11",
+    "n_rows": 10081,
+    "n_pos": 6312,
+    "n_neg": 3769,
+    "pos_frac": 0.6261,
+    "dropped": 2177,
+    "label_mapping": {
+      "true": 1,
+      "false": 0,
+      "mixture": null,
+      "unproven": null
+    },
+    "sha256": "1a7923a2394f40306828f236bd4f4fc99af8658325e1d3c97046444f8b6be27e",
+    "path": "data/pubhealth/pubhealth.csv",
+    "substitute_for": null,
+    "note": "PUBHEALTH (Kotonya & Toni, EMNLP 2020). The 'health_fact' and ImperialCollegeLondon/health_fact ids are script-based and fail on datasets>=4.0; this is a parquet conversion. 4-way labels reduced to binary by dropping mixture/unproven.",
+    "fetch_seconds": 58.1
+  },
+  "_unrecoverable": {
+    "gossip": "GossipCop (FakeNewsNet, Shu et al.). Real in only 10/40 runs; the local gossipcop.csv is gone. Candidate mirrors exist but none is the same corpus: LittleFish-Coder/Fake_News_GossipCop ships ~800MB of precomputed embeddings and stalls; Jinyan1/GossipCop splits are MF/HF/MR/HR (machine- vs human-generated), i.e. a machine-text-detection variant, NOT the original fake/real corpus. Substituting it would silently change what the dataset measures \u2014 needs a decision.",
+    "snopes": "CSV-only, no source documented anywhere in the repo. Real in 10/38 runs; the CSV that produced those is gone. No public HF mirror found.",
+    "weather": "Truth-discovery style tabular dataset. NEVER real (0/51 runs). No source documented.",
+    "population": "Truth-discovery style tabular dataset. NEVER real (0/46 runs). No source documented.",
+    "flights": "Truth-discovery style tabular dataset. NEVER real (0/44 runs). No source documented. The classic Flight benchmark (Li et al., VLDB 2013) is a candidate replacement but is a DIFFERENT dataset and needs an explicit decision."
+  }
+}

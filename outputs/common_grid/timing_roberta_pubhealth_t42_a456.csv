@@ -1,0 +1,2 @@
+dataset,model,attack_type,time_condition_s,time_search_s,time_eval_s,n_candidates
+pubhealth,roberta,llm_generated,31.54,24.19,6.54,40

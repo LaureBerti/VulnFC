@@ -1,0 +1,2 @@
+dataset,model,attack_type,epsilon,seed,vs,ir,csr,csr_ir,n_target_correct,n_targets,n_perturbed,time_search_s,time_eval_s,n_candidates,time_condition_s
+pubhealth,bert-base-uncased,fgsm,0.3,42,0.6061,0.5,0.0,0.0,33,40,40,2000.02,128.76,2000,2149.91

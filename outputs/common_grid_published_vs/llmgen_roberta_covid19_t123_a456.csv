@@ -1,0 +1,2 @@
+dataset,model,attack_type,seed,vs,ir,csr,csr_ir,n_target_correct,accuracy_clean,accuracy_poisoned,n_sources,n_malicious,time_search_s,time_eval_s,n_candidates,time_condition_s
+covid19,roberta,llm_generated,456,0.15,0.15,0.0,0.0,40,0.9825,0.9675,400,40,1208.64,368.69,40,1582.25
