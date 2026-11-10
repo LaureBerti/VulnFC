@@ -1,8 +1,8 @@
-# VulnFC — Vulnerability Benchmark for Fact-Checking Architectures
+# VulnFC — Truth under Input Poisoning Attacks
 
 Code and reproduction guide for the paper:
 
-> **Truth under Data Poisoning Attacks: A Vulnerability Benchmark Across Fact-Checking Architectures**
+> **Truth under Input Poisoning Attacks: Benchmarking Fact-Checking Architectures**
 
 ---
 
